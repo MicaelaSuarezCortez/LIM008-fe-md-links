@@ -22,4 +22,4 @@ export const saveFileMdWithPath = pathAbsolute => {
   });
   return arrayPath;
 };
-console.log(saveFileMdWithPath('E:\\prueba'));
+// console.log(saveFileMdWithPath('E:\\prueba'));
