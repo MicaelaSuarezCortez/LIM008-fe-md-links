@@ -7,9 +7,9 @@ describe('existPath', () => {
 
 describe('validatePathAbsolute', () => {
   it('debería devolver true si la ruta es absoluta', () =>
-    expect(validatePathAbsolute('C:\\carpeta1\carpeta11.musica.js')).toBe(true));
+    expect(validatePathAbsolute('C:\\carpeta1\\carpeta11.musica.js')).toBe(true));
   it('debería devolver false si la ruta es relativa', () =>
-    expect(validatePathAbsolute('..\carpeta1\carpeta11\musica.js')).toBe(false));
+    expect(validatePathAbsolute('..\\carpeta1\\carpeta11\\musica.js')).toBe(false));
 });
 
 describe('convertPathToAbsolute', () => {

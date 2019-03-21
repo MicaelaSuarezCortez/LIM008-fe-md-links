@@ -8,12 +8,11 @@ export const validateFile = file => fs.lstatSync(file).isFile();
 export const validateDirectory = directory => fs.lstatSync(directory).isDirectory();
 export const validateFileMd = paths => path.extname(paths) === '.md';
 
-
 export const saveFileMdWithPath = pathAbsolute => {
   let arrayPath = [];
-  const files = fs.readdirSync(pathAbsolute);// lee el directorio 
-  files.forEach(file => {
-    let filePath = path.join(pathAbsolute, file);
+  const files = fs.readdirSync(pathAbsolute); // retorna un array que contiene los nombres de files
+  files.forEach(element => {
+    let filePath = path.join(pathAbsolute, element);
     if (validateFile(filePath) && validateFileMd(filePath)) {
       arrayPath.push(filePath);
     } else if (validateDirectory(filePath)) {
