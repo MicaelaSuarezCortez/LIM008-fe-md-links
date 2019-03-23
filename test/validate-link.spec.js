@@ -45,11 +45,11 @@ const output = [{
   statusText: 'OK'
 }];
 
-test('Debería retornar un array de objetos con la propiedad status y statustext', (done) => {
-  validateLinks(input)
-    .then((result) => {
+describe('validateLinks', () => {
+  it('should return an array of objects', (resolve) => {
+    validateLinks(input).then(result => {
       expect(result).toEqual(output);
-      done();
+      resolve();
     });
+  });
 });
-
