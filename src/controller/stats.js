@@ -1,12 +1,13 @@
 export const statsLinks = (arrayObjetosLinks) => {
   let newArrayHref = [];  
   arrayObjetosLinks.forEach(element => newArrayHref.push(element.href));
-  const totalLinks = newArrayHref.reduce((acum, item) => acum + (item.href !== ''), 0);
+  const totalLinks = newArrayHref.length;
   const uniqLinks = newArrayHref.filter((value, index, array) => array.indexOf(value) === index).length;  
   return {totalLinks, uniqLinks};
 };
 
-// console.log(statsLinks(arrayObjLinks));
+
+console.log(statsLinks(arrayObjLinks));
 
 
 export const linksBroken = (arrayObjetosValidate) => {
