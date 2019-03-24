@@ -15,10 +15,13 @@ export const saveFileMdWithPath = pathAbsolute => {
     let filePath = path.join(pathAbsolute, element);
     if (validateFile(filePath) && validateFileMd(filePath)) {
       arrayPath.push(filePath);
-    } else if (validateDirectory(filePath)) {
+    } else {
       arrayPath = arrayPath.concat(saveFileMdWithPath(filePath));
     }
   });
   return arrayPath;
 };
 // console.log(saveFileMdWithPath('E:\\prueba'));
+// else if (validateDirectory(filePath)) {
+//   arrayPath = arrayPath.concat(saveFileMdWithPath(filePath));
+// }

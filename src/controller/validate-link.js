@@ -14,7 +14,7 @@ export const validateLinks = (array) => {
             link.statusText = 'Fail';
             resolve(link);
           }
-        }).catch((errorObjFetch) => {          
+        }).catch((objFetch) => {          
           link.status = 'Fail';
           link.statusText = 'URL inválida';
           resolve(link);
@@ -26,3 +26,5 @@ export const validateLinks = (array) => {
 // validateLinks(input)
 //   .then((res) => console.log(res))
 //   .catch((res) => console.log(res));
+
+

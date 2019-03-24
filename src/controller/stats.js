@@ -1,4 +1,4 @@
-export const statsLinks = (arrayObjetosLinks) => {
+export const totalAndUniqueLinks = (arrayObjetosLinks) => {
   let newArrayHref = [];  
   arrayObjetosLinks.forEach(element => newArrayHref.push(element.href));
   const totalLinks = newArrayHref.length;
@@ -7,7 +7,7 @@ export const statsLinks = (arrayObjetosLinks) => {
 };
 
 
-console.log(statsLinks(arrayObjLinks));
+// console.log(statsLinks(arrayObjLinks));
 
 
 export const linksBroken = (arrayObjetosValidate) => {
@@ -23,4 +23,5 @@ export const linksBroken = (arrayObjetosValidate) => {
   }
   return {broken};
 };
+
 

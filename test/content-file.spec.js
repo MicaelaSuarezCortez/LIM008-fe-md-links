@@ -18,7 +18,14 @@ const output = [{
   text: 'https://rpp.pe/',
   file:
     'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
-}];
+},
+{
+  href: 'http://mediadiscovyyyyyyyyery.net',
+  text: 'http://mediadiscovyyyyyyyyery.net',
+  file:
+    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
+}
+];
 
 describe('extractContentFileMd', () => {
   it('debería poder extraer el contenido y retornar array de objetos de links', () => {

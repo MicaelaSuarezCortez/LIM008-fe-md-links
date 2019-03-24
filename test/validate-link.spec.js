@@ -17,7 +17,14 @@ const input = [{
   text: 'https://rpp.pe/',
   file:
     'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
-}];
+},
+{
+  href: 'http://mediadiscovyyyyyyyyery.net',
+  text: 'http://mediadiscovyyyyyyyyery.net',
+  file:
+    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
+}
+];
 
 
 const output = [{
@@ -43,13 +50,24 @@ const output = [{
     'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md',
   status: 200,
   statusText: 'OK'
-}];
+},
+{
+  href: 'http://mediadiscovyyyyyyyyery.net',
+  text: 'http://mediadiscovyyyyyyyyery.net',
+  file:
+    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md',
+  status: 'Fail',
+  statusText: 'URL inválida'
+}
+];
+
 
 describe('validateLinks', () => {
-  it('should return an array of objects', (resolve) => {
-    validateLinks(input).then(result => {
-      expect(result).toEqual(output);
-      resolve();
-    });
+  it('debería retornar un array de objetos', (resolve) => {
+    validateLinks(input)
+      .then(result => {
+        expect(result).toEqual(output);
+        resolve();
+      }).catch(() => resolve());
   });
 });

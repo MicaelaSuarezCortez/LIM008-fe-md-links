@@ -1,4 +1,4 @@
-import { statsLinks, linksBroken } from '../controller/stats.js';
+import { totalAndUniqueLinks, linksBroken } from '../src/controller/stats.js';
 
 const arrayObjLinks = [{
   href: 'https://www.google.com/',
@@ -17,7 +17,14 @@ const arrayObjLinks = [{
   text: 'https://rpp.pe/',
   file:
       'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
-}];
+},
+{
+  href: 'http://mediadiscovyyyyyyyyery.net',
+  text: 'http://mediadiscovyyyyyyyyery.net',
+  file:
+    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
+}
+];
 
 const arrayObjValidate = [{
   href: 'https://www.google.com/',
@@ -42,16 +49,24 @@ const arrayObjValidate = [{
         'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md',
   status: 200,
   statusText: 'OK'
+},
+{
+  href: 'http://mediadiscovyyyyyyyyery.net',
+  text: 'http://mediadiscovyyyyyyyyery.net',
+  file:
+    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md',
+  status: 'Fail',
+  statusText: 'URL inválida'
 }];
 
-describe('statsLinks', () => {
+describe('totalAndUniqueLinks', () => {
   it('debería retornar el total de links y links unicos', () => {
-    expect(statsLinks(arrayObjLinks)).toEqual({totalLinks: 3, uniqLinks: 3});
+    expect(totalAndUniqueLinks(arrayObjLinks)).toEqual({totalLinks: 4, uniqLinks: 4});
   });
 });
 
 describe('linksBroken', () => {
   it('debería retornar el total de links rotos', () => {
-    expect(linksBroken(arrayObjValidate)).toEqual({broken: 1});
+    expect(linksBroken(arrayObjValidate)).toEqual({broken: 2});
   });
 });
