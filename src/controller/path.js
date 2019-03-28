@@ -21,7 +21,7 @@ export const saveFileMdWithPath = pathAbsolute => {
   });
   return arrayPath;
 };
-// console.log(saveFileMdWithPath('E:\\prueba'));
+// console.log(saveFileMdWithPath('test\\prueba'));
 // else if (validateDirectory(filePath)) {
 //   arrayPath = arrayPath.concat(saveFileMdWithPath(filePath));
 // }

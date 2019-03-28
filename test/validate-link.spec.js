@@ -61,7 +61,6 @@ const output = [{
 }
 ];
 
-
 describe('validateLinks', () => {
   it('debería retornar un array de objetos', (resolve) => {
     validateLinks(input)

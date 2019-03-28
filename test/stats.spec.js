@@ -70,3 +70,4 @@ describe('linksBroken', () => {
     expect(linksBroken(arrayObjValidate)).toEqual({broken: 2});
   });
 });
+
