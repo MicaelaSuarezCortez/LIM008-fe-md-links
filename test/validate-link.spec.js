@@ -1,6 +1,6 @@
 import { validateLinks } from '../src/controller/validate-link.js';
 
-const input = [{
+const arrayObjLink = [{
   href: 'https://www.google.com/',
   text: 'https://www.google.com/',
   file:
@@ -27,7 +27,7 @@ const input = [{
 ];
 
 
-const output = [{
+const arrayObjValidate = [{
   href: 'https://www.google.com/',
   text: 'https://www.google.com/',
   file:
@@ -63,9 +63,9 @@ const output = [{
 
 describe('validateLinks', () => {
   it('debería retornar un array de objetos', (resolve) => {
-    validateLinks(input)
+    validateLinks(arrayObjLink)
       .then(result => {
-        expect(result).toEqual(output);
+        expect(result).toEqual(arrayObjValidate);
         resolve();
       }).catch(() => resolve());
   });

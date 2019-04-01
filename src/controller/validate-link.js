@@ -23,33 +23,3 @@ export const validateLinks = (array) => {
     }));
   return Promise.all(linkStatus);
 };
-// const input = [{
-//   href: 'https://www.google.com/',
-//   text: 'https://www.google.com/',
-//   file:
-//     'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
-// },
-// {
-//   href: 'http://algo.com/2/3/',
-//   text: 'http://algo.com/2/3/',
-//   file:
-//     'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
-// },
-// {
-//   href: 'https://rpp.pe/',
-//   text: 'https://rpp.pe/',
-//   file:
-//     'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
-// },
-// {
-//   href: 'http://mediadiscovyyyyyyyyery.net',
-//   text: 'http://mediadiscovyyyyyyyyery.net',
-//   file:
-//     'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md'
-// }
-// ];
-// validateLinks(input)
-//   .then((res) => console.log(res))
-//   // .catch((res) => console.log(res));
-
-

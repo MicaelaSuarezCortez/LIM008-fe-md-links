@@ -1,39 +1,3 @@
-// condition para si en caso es true usa la función de rotos, si es false, solo total y únicos
-// en función totalAndUniqueLinks agregar una condición si es caso es validate true llame a función broken
-const output = [{
-  href: 'https://www.google.com/',
-  text: 'https://www.google.com/',
-  file:
-    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md',
-  status: 200,
-  statusText: 'OK'
-},
-{
-  href: 'http://algo.com/2/3/',
-  text: 'http://algo.com/2/3/',
-  file:
-    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md',
-  status: 404,
-  statusText: 'Fail'
-},
-{
-  href: 'https://rpp.pe/',
-  text: 'https://rpp.pe/',
-  file:
-    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md',
-  status: 200,
-  statusText: 'OK'
-},
-{
-  href: 'http://mediadiscovyyyyyyyyery.net',
-  text: 'http://mediadiscovyyyyyyyyery.net',
-  file:
-    'C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md',
-  status: 'Fail',
-  statusText: 'URL inválida'
-}
-];
-
 export const totalAndUniqueLinks = (arrayObjetosLinks) => {
   let newArrayHref = [];  
   arrayObjetosLinks.forEach(element => newArrayHref.push(element.href));
@@ -62,18 +26,18 @@ export const linksBroken = (arrayObjetosLinks) => {
 
 
 export const statsLinks = (arrayObjetosLinks, broken) => {
-  const totalUniqueLinks = totalAndUniqueLinks(arrayObjetosLinks);
+  const statsTotalUniqueLinks = totalAndUniqueLinks(arrayObjetosLinks);
   if (broken) {
     const linkBrokens = linksBroken(arrayObjetosLinks);
-    const stats = {
-      total: totalUniqueLinks.totalLinks,
-      unicos: totalUniqueLinks.uniqLinks,
-      rotos: linkBrokens.broken
+    const statsTotalUniqueBrokenLinks = {
+      total: statsTotalUniqueLinks.totalLinks,
+      unique: statsTotalUniqueLinks.uniqLinks,
+      broken: linkBrokens.broken
     };
-    return stats;
+    return statsTotalUniqueBrokenLinks;
   }
-  return totalUniqueLinks;  
+  return statsTotalUniqueLinks;  
 };
 
-// console.log(statsPrueba(output, false));
+// console.log(statsLinks(arrayObjValidate, false));
 
