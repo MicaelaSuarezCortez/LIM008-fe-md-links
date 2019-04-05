@@ -5,7 +5,7 @@ const fs = require('fs');
 export const extractContentFileMd = (path) => {
   let arrayContentLinks = [];
   path.forEach(element => {
-    const readContentFile = fs.readFileSync(element, 'utf8');
+    const readContentFile = fs.readFileSync(element, 'utf8'); // lee el contenido del file
     // Get reference
     const renderer = new myMarked.Renderer();// llamando a myMarked con método Renderer
     renderer.link = (href, title, text) => {

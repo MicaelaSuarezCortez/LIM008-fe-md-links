@@ -20,6 +20,7 @@ export const linksBroken = (arrayObjetosLinks) => {
       broken = broken;
     }
   }
+  // console.log(broken);
   return {broken};
 };
 // console.log(linksBroken(output));

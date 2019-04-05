@@ -8,6 +8,9 @@
     "npm",
     "jest"
   ],
+  "bin":{
+    "md-links": "./cli.js"
+  },
   "license": "MIT",
   "scripts": {
     "eslint": "eslint --ext .js src/ test/",
