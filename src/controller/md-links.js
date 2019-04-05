@@ -17,5 +17,3 @@ export const mdlinks = (path, options) => new Promise((resolve) => {
     resolve(arrayLinks);
   }
 });
-// md-links retorna una promesa
-// mdlinks('test\\prueba', {validate: true}) .then(res => console.log(res));

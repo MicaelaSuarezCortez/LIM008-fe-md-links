@@ -15,10 +15,3 @@ export const extractContentFileMd = (path) => {
   });
   return arrayContentLinks;
 };
-// console.log(extractContentFileMd(['C:\\Users\\Micaela\\projectsLaboratoria\\LIM008-fe-md-links\\test\\prueba\\file.md']));
-
-// marked(markdownString [,options] [,callback])
-/* markdownString: String of markdown source to be compiled.
-   Hash of options. Can also use marked.setOptions
-   Called when markdownString has been parsed. Can be used as second argument if no options present.
-*/

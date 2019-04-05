@@ -2,14 +2,14 @@
   "name": "md-links",
   "version": "1.0.0",
   "description": "md-links @ Laboratoria",
-  "main": "src/index.html",
+  "main": "./lib/controller/md-links.js",
   "keywords": [
     "javascript",
     "npm",
     "jest"
   ],
-  "bin":{
-    "md-links": "./cli.js"
+  "bin": {
+    "md-links": "./lib/controller/cli.js"
   },
   "license": "MIT",
   "scripts": {

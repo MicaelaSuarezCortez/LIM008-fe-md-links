@@ -1,5 +1,9 @@
+#!/usr/bin/env node
+
+const [,, ...args] = process.argv;
+
 import { mdlinks } from '../controller/md-links.js'; // retorna array de objetos links, array de objetos links con validación
-import { statsLinks, totalAndUniqueLinks, linksBroken } from '../controller/stats.js'; // retorna estadística de links total y únicos, así como los links rotos
+import { statsLinks, totalAndUniqueLinks} from '../controller/stats.js'; // retorna estadística de links total y únicos, así como los links rotos
 
 
 const path = process.argv;
