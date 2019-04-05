@@ -31,6 +31,7 @@
   "dependencies": {
     "commander": "^2.19.0",
     "marked": "^0.6.1",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "social-network": "github:MicaelaSuarezCortez/md-links"
   }
 }

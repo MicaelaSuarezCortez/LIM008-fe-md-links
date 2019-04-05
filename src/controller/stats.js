@@ -6,8 +6,6 @@ export const totalAndUniqueLinks = (arrayObjetosLinks) => {
   return {totalLinks, uniqLinks};
 };
 
-// console.log(totalAndUniqueLinks(output));
-
 
 export const linksBroken = (arrayObjetosLinks) => {
   let newArrayStatusText = [];  
@@ -20,10 +18,9 @@ export const linksBroken = (arrayObjetosLinks) => {
       broken = broken;
     }
   }
-  // console.log(broken);
+ 
   return {broken};
 };
-// console.log(linksBroken(output));
 
 
 export const statsLinks = (arrayObjetosLinks, broken) => {
@@ -39,6 +36,4 @@ export const statsLinks = (arrayObjetosLinks, broken) => {
   }
   return statsTotalUniqueLinks;  
 };
-
-// console.log(statsLinks(arrayObjValidate, false));
 

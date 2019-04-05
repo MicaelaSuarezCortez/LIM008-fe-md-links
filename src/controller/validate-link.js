@@ -7,7 +7,6 @@ export const validateLinks = (array) => {
         .then((objFetch) => {
           if (objFetch.status >= 200 && objFetch.status <= 399) {
             link.status = objFetch.status;
-            // link.statusText = objFetch.statusText;
             link.statusText = 'OK';
             resolve(link);
           } else {
