@@ -27,11 +27,10 @@ algunas estadísticas.
 ## Diagrama de Flujo
 
   Se elaboró un diagrama de flujo que representa la secuencia lógica de la libería md-links.
-
-  ![Sin titulo](img/flujograma-md-links.png)
+  ![Sin titulo](src/img/flujograma-md-links.png)
 
 ## Instalación 
-  Ejecutar npm install --save-dev MicaelaSuarezCortez/md-links.
+  Ejecutar npm install MicaelaSuarezCortez/md-links.
 
 ## JavaScript API
 
