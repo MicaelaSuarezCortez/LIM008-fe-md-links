@@ -12,16 +12,11 @@ Estos archivos `Markdown` normalmente contienen _links_ (vínculos/ligas) que
 muchas veces están rotos o ya no son válidos y eso perjudica mucho el valor de
 la información que se quiere compartir.
 
-Dentro de una comunidad de código abierto, nos han propuesto crear una
-herramienta usando [Node.js](https://nodejs.org/), que lea y analice archivos
-en formato `Markdown`, para verificar los links que contengan y reportar
-algunas estadísticas.
-
 ![md-links](https://user-images.githubusercontent.com/110297/42118443-b7a5f1f0-7bc8-11e8-96ad-9cc5593715a6.jpg)
 
 ## Funcionalidad
 
-  La librería md-links tiene por finalidad extraer y validar los links que estén dentro de un archivo markdown.
+  La librería md-links tiene por finalidad leer y analizar archivos en formato `Markdown`, para verificar los links que contengan y reportar algunas estadísticas.
 
 
 ## Diagrama de Flujo
@@ -33,9 +28,6 @@ algunas estadísticas.
   Ejecutar npm install MicaelaSuarezCortez/md-links.
 
 ## JavaScript API
-
-El módulo debe poder importarse en otros scripts de Node.js y debe ofrecer la
-siguiente interfaz:
 
 ### `mdLinks(path, options)`
 
@@ -50,9 +42,7 @@ siguiente interfaz:
 
 #### Valor de retorno
 
-La función debe retornar una promesa (`Promise`) que resuelva a un arreglo
-(`Array`) de objetos (`Object`), donde cada objeto representa un link y contiene
-las siguientes propiedades:
+Cada objeto representa un link y contiene las siguientes propiedades:
 
 - `href`: URL encontrada.
 - `text`: Texto que aparecía dentro del link (`<a>`).
@@ -97,20 +87,11 @@ $ md-links ./some/example.md
 ./some/example.md https://otra-cosa.net/algun-doc.html algún doc
 ./some/example.md http://google.com/ Google
 ```
-
-El comportamiento por defecto no debe validar si las URLs responden ok o no,
-solo debe identificar el archivo markdown (a partir de la ruta que recibe como
-argumento), analizar el archivo Markdown e imprimir los links que vaya
-encontrando, junto con la ruta del archivo donde aparece y el texto
-que hay dentro del link (truncado a 50 caracteres).
-
 ### Options
 
 #### `--validate`
 
-Si pasamos la opción `--validate`, el módulo debe hacer una petición HTTP para
-averiguar si el link funciona o no. Si el link resulta en una redirección a una
-URL que responde ok, entonces consideraremos el link como ok.
+Si pasamos la opción `--validate`, retorna.
 
 Por ejemplo:
 
